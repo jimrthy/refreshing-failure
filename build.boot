@@ -2,9 +2,13 @@
 (def version "0.1.0-SNAPSHOT")
 
 (set-env! :resource-paths #{"resources" "src"}
-          :source-paths   #{"test"}
-          :dependencies   '[[org.clojure/clojure "RELEASE"]
-                            [adzerk/boot-test "RELEASE" :scope "test"]])
+          :source-paths   #{"test" "dev-resources"}
+          :dependencies   '[[org.apache.logging.log4j/log4j-core "2.8.2" :scope "test"]
+                            [org.apache.logging.log4j/log4j-1.2-api "2.8.2" :scope "test"]
+                            [org.clojure/clojure "RELEASE"]
+                            [org.clojure/tools.logging "0.4.0"]
+                            [adzerk/boot-test "RELEASE" :scope "test"]
+                            [samestep/boot-refresh "0.1.0"]])
 
 (task-options!
  aot {:namespace   #{'refreshing-failure.core}}
@@ -17,6 +21,8 @@
                     "http://www.eclipse.org/legal/epl-v10.html"}}
  jar {:main        'refreshing-failure.core
       :file        (str "refreshing-failure-" version "-standalone.jar")})
+
+(require '[samestep.boot-refresh :refer (refresh)])
 
 (deftask build
   "Build the project locally as a JAR."

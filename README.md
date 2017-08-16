@@ -1,38 +1,22 @@
 # refreshing-failure
 
-FIXME: description
+Bug demonstration/reproduction
 
 ## Installation
 
-Download from http://example.com/FIXME.
+There's nothing to install
 
 ## Usage
 
-FIXME: explanation
+    boot cider repl
 
-Run the project directly:
+At least, if you want emacs support.
 
-    $ boot run
-
-Run the project's tests (they'll fail until you edit them):
-
-    $ boot test
-
-Build an uberjar from the project:
-
-    $ boot build
-
-Run the uberjar:
-
-    $ java -jar target/refreshing-failure-0.1.0-SNAPSHOT-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
+You should be able to accomplish the same from the raw `boot repl`
 
 ## Examples
 
-...
+
 
 ### Bugs
 
