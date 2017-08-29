@@ -1,9 +1,8 @@
 (ns refreshing-failure.core-test
+  #_core-test
   (:require [clojure.test :refer :all]
             [refreshing-failure.core :as core]))
 
 (deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 4 (core/xyz 1)))
-    (comment
-      (is (core/xyz1) 'broken))))
+  (testing "Basic math"
+    (is (= 5 (core/add-3 2)))))

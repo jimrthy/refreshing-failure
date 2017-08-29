@@ -8,7 +8,7 @@
   []
   (log/info "\nUsage: run.sh -f /path/to/files1 -f /path/to/files2 ... > output.csv"))
 
-(defn xyz
+(defn add-3
   [n]
   (+ 3 n))
 
